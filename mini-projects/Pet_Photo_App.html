@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>RabbitPhotoApp</title>
+    </head>
+    <body>
+        <main>
+            <h1>PetPhotoApp</h1>
+            <section>
+                <h2>Pet Photos</h2>
+                <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>
+                <a href="https://freecatphotoapp.com"><img src="https://kb.rspca.org.au/wp-content/uploads/2023/03/bunny-cardboard.jpg" alt="A cute ginger rabbit looking for owner"></a>
+            </section>
+            <section>
+                <h2>Pet Lists</h2>
+                <h3>Things pets love:</h3>
+                <ul>
+                    <li>solving a puzzle</li>
+                    <li>going for walks</li>
+                    <li>netflix and nap</li>       
+                </ul>
+                <figure>
+                    <img src="https://i.pinimg.com/736x/05/5a/bf/055abfdfe2861502fea808abc3524dab.jpg" alt="Kittens watching netflix">
+                    <figcaption>Kittens <em>love</em> to netflix and chill.</figcaption>
+                </figure>
+                <h3>Top 3 things pets hate:</h3>
+                <ol>
+                    <li>tight lease</li>
+                    <li>baths</li>
+                    <li>being alone</li>
+                </ol>
+                <figure>
+                    <img src="https://i.ytimg.com/vi/FOIMoCToqu8/sddefault.jpg" alt="Three dogs taking bath"> 
+                    <figcaption>Dogs <strong>hate</strong> taking bath.</figcaption> 
+                </figure>
+            </section>
+            <section>
+                <h2>Pet Form</h2> 
+                <form action="https://freecatphotoapp.com/submit-cat-photo">
+                    <fieldset>
+                        <legend>Is your pet an indoor or outdoor pet?</legend>
+                        <label><input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+                        <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor">Outdoor</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>What's your pet's personality?</legend>
+                        <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+                        <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+                        <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+                    </fieldset>
+                    <input type="text" name="catphotourl" placeholder="pet photo URL" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+        </footer>
+    </body>
+</html>
