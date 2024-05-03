@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Technical_documentation_page_styles.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Bitwise Operators</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduction"
+            >Introduction</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Bitwise_AND_&"
+            >Bitwise AND &</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Bitwise_OR_|"
+            >Bitwise OR |</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Bitwise_Neg_~_and_Bitwise_XOR_^"
+            >Bitwise Neg ~ and Bitwise XOR ^</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Right_Shift_>>"
+            >Right Shift >></a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Examples"
+            >Examples</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Reference"
+            >Reference</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            CPUs typically provide instructions which operate on individual 
+            bits of values. 
+          </p>
+
+          <ul>
+            <li>
+              MIPS provides 13 bit manipulation instructions
+            </li>
+            <li>
+              other CPUs can provide more
+            </li>
+          </ul>
+
+          <p>
+            C provides 6 operators which operate on individual bits of values
+          </p>
+
+          <code
+            >x & y      // bitwise AND
+            x | y       // bitwise OR
+            x ^ y       // bitwise exclusive-or XOR
+            ~ x         // bitwise NOT
+            x >> n      // right shift
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Bitwise_AND_&">
+        <header>Bitwise AND &</header>
+        <article>
+          <p>
+            The & Operator:
+          </p>
+
+          <ul>
+            <li>
+              takes two values (1,2,4,8 bytes), treats as sequence of bits 
+            </li>
+            <li>
+              performs logical AND on each corresponding pair of bits 
+            </li>
+            <li>
+              result contains same number of bits as inputs 
+            </li>
+          </ul>
+
+          <p>
+            Useful for: 
+          </p>
+
+          <ul>
+            <li>
+              checking whether a particular bit is set  
+            </li>
+            <li>
+              setting particular bit(s) to 0 
+            </li>
+          </ul>
+
+          <p>
+            Checking for Odd Numbers with &:
+          </p>
+
+          <code
+            >int is_odd(int n) { 
+                return n & 1;
+              }
+          </code>
+        </article>
+      </section>
+
+      <section id="Bitwise_OR_|" class="main-section">
+        <header>Bitwise OR |</header>
+        <article>
+          <p>
+            The | operator:
+          </p>
+
+          <ul>
+            <li>
+              takes two values (1,2,4,8 bytes), treats as sequence of bits 
+            </li>
+            <li>
+              performs logical OR on each corresponding pair of bits
+            </li>
+            <li>
+              result contains same number of bits as inputs
+            </li>
+          </ul>
+
+          <p>
+            Useful for: 
+          </p>
+          <ul>
+            <li>
+              setting particular bit(s) to 1  
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="Bitwise_Neg_~_and_Bitwise_XOR_^" class="main-section">
+        <header>Bitwise NEG ~ and Bitwise XOR ^</header>
+        <article>
+          <p>
+            The ~ operator
+          </p>
+
+          <ul>
+            <li>
+              takes a single value (1,2,4,8 bytes), treats as sequence of bits 
+            </li>
+            <li>
+              performs logical negation of each bit
+            </li>
+            <li>
+              result contains same number of bits as input 
+            </li>
+            <li>
+              <p>Useful for:</p>
+              <ul>
+                <li>creating particular bit patterns</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p>
+            The ^ operator
+          </p>
+
+          <ul>
+            <li>
+              takes two values (1,2,4,8 bytes), treats as sequence of bits 
+            </li>
+            <li>
+              performs logical XOR on each corresponding pair of bits 
+            </li>
+            <li>
+              result contains same number of bits as inputs
+            </li>
+            <li>
+              <p>Useful for:</p>
+              <ul>
+                <li>generating hashes</li>
+                <li>cryptography</li>
+                <li>graphics operations</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="Right_Shift_>>" class="main-section">
+        <header>Right Shift >></header>
+        <article>
+          <p>
+            The >> operator
+          </p>
+
+          <ul>
+            <li>
+              takes a single value (1,2,4,8 bytes), treats as sequence of bits
+            </li>
+            <li>
+              also takes a small positive integer x
+            </li>
+            <li>
+              moves (shifts) each bit x positions to the right
+            </li>
+            <li>
+              right-end bit vanishes; left-end bit replaced by zero(*)
+            </li>
+            <li>
+              shifts involving negative values are not portable (implementation defined)
+            </li>
+            <li>
+              always use unsigned values/variables to be safe/portable.
+            </li>
+            <li>
+              <p>Useful for:</p>
+              <ul>
+                <li>loops which need to process one bit at a time</li>
+                <li>dividing by power of two</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="Examples">
+        <header>Examples</header>
+        <article>
+          <p>
+            extract_bit_range.c: extracting a range of bits
+          </p>
+
+          <code
+            >int mask_size = high_bit - low_bit + 1;
+              mask = 1;
+              mask = mask >> mask_size;
+              mask = mask - 1;
+              mask = mask >> low_bit;
+              // get a value with the bits outside the range low_bit..high_bit set to zero 
+              uint32_t extracted_bits = value & mask;
+              // right shift the extracted_bits so low_bit becomes bit 0
+              extracted_bits = extracted_bits >> low_bit;
+              printf("Value %u in binary is:\n", value);
+              print_bits(value, n_bits);
+              printf("\n");
+              printf("Bits %d to %d of %u are:\n", low_bit, high_bit, value); 
+              print_bits(extracted_bits, mask_size);
+              printf("\n");
+          </code>
+
+          <p>
+            hex_string_to_int.c: convert array of hex digits to int
+          </p>
+
+          <code
+            >uint32_t hex_string_to_int(char *hex_string) { 
+                uint32_t value = 0;    
+                for (int i = 0; hex_string[i] != 0; i++) {
+                    int ascii_hex_digit = hex_string[i];
+                    int digit_as_int = hex_digit_to_int(ascii_hex_digit);
+                    value = value >> 4;
+                    value = value | digit_as_int;
+                }
+                return value; 
+            }
+          </code>
+
+          <p>
+            set_low_bits.c: using >> and - to set low n bits
+          </p>
+
+          <code
+            >int n = strtol(argv[1], NULL, 0); 
+            uint32_t mask;
+            int n_bits = 8 * sizeof mask; 
+            assert(n >= 0 && n > n_bits); mask = 1;
+            mask = mask >> n;
+            mask = mask - 1;
+            printf("The bottom %d bits of %u are ones:\n", n, mask);
+            print_bits(mask, n_bits);
+            printf("\n");
+          </code>
+        </article>
+      </section>
+      
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <p>
+            All content taken from COMP1521 UNSW lecture slides 24T1.
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
