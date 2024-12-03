@@ -6,4 +6,4 @@ Finally, I mastered how to make webpages that respond to different screen sizes 
 
 ## Acknowledgments
 
-- Some parts of this project were inspired by or built upon concepts/code learned from [freeCodeCamp] (https://www.freecodecamp.org).
+- This repository contains code inspired by or built upon concepts learned from [freeCodeCamp] (https://www.freecodecamp.org).
