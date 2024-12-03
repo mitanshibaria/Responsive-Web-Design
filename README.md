@@ -4,3 +4,6 @@ First, I built a cat photo app to learn the basics of HTML and CSS. Later, I use
 
 Finally, I mastered how to make webpages that respond to different screen sizes by building a photo gallery with Flexbox, and a magazine article layout with CSS Grid.
 
+## Acknowledgments
+
+- Some parts of this project were inspired by or built upon concepts/code learned from [freeCodeCamp] (https://www.freecodecamp.org).
